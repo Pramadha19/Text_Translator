@@ -1,0 +1,256 @@
+
+
+body { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    } 
+    
+    .container { 
+    display: flex; 
+    align-items: center; 
+    min-height: 100vh; 
+    flex-direction: column; 
+    box-sizing: border-box; 
+    padding-top: 100px; 
+    width:100%;
+    } 
+    
+    .row1 { 
+    /* width: calc(100% - 10px);  */
+    max-width: 100%; 
+    } 
+    
+    select { 
+    width: calc(50% - 20px); 
+    line-height: 40px; 
+    font-size: 14px; 
+    border: 1px solid #dadce0; 
+    border-radius: 8px; 
+    height: 40px; 
+    padding-left: 18px; 
+    position: relative; 
+    color: #1a0dab; 
+    cursor: pointer; 
+    outline: none; 
+    user-select: none; 
+    } 
+    
+    .reversesvg { 
+    width: 20px; 
+    color: rgba(0, 0, 0, 0.26); 
+    line-height: 40px; 
+    opacity: 0.5; 
+    vertical-align: middle; 
+    cursor: pointer; 
+    margin: 0px 10px; 
+    } 
+    
+    option { 
+    color: #202124; 
+    } 
+    
+    .row2 { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: calc(100% - 10px); 
+    max-width: 650px; 
+    margin-top: 10px; 
+    position: relative; 
+    } 
+    
+    .inputText { 
+    width: calc(50% - 20px); 
+    position: relative; 
+    } 
+    
+    .outputText { 
+    width: calc(50% - 20px); 
+    height: 169px; 
+    font-family: monospace; 
+    box-sizing: border-box; 
+    padding: 15px; 
+    font-size: 20px; 
+    border-radius: 8px; 
+    overflow: auto; 
+    background: #edeff0; 
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    } 
+    
+    .row2 textarea { 
+    width: 100%; 
+    height: 150px; 
+    resize: none; 
+    box-sizing: border-box; 
+    padding: 0px 35px 10px 10px; 
+    margin-top: 15px; 
+    border: none; 
+    font-size: 20px; 
+    overflow: auto; 
+    color: #202124; 
+    outline: none; 
+    } 
+    
+    .removeinput { 
+    cursor: pointer; 
+    width: 20px; 
+    position: absolute; 
+    opacity: 0.5; 
+    top: 5px; 
+    right: 3px; 
+    } 
+    
+    .row3 { 
+    width: calc(100% - 10px); 
+    max-width: 650px; 
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+    } 
+    
+    /* .btn { 
+    width: 100%; 
+    position: relative; 
+    padding: 10px; 
+    outline: none; 
+    background-color: #3374de; 
+    color: #fff; 
+    border: 2px solid #ed6da0; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    letter-spacing: 0.5px; 
+    
+    }  */
+    .btn {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        outline: none;
+        background-color: #3374de;
+        color: #fff;
+        border: 2px solid #3374de;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition for background color, text color, and transform */
+    }
+    
+    /* Hover effect */
+    .btn:hover {
+        background-color: #265da3; /* Darken background color on hover */
+        color: #f0f0f0; /* Lighten text color on hover */
+        transform: translateY(-2px); /* Move button slightly upwards on hover */
+    }
+    
+    /* Active state effect */
+    .btn:active {
+        transform: translateY(1px); /* Move button slightly downwards on click */
+    }
+    
+    /* Focus state effect */
+    .btn:focus {
+        outline: none; /* Remove default focus outline */
+        box-shadow: 0 0 0 2px #3374de; /* Add custom focus outline */
+    }
+    
+    /* Add animation for button loading state */
+    .btn.loading {
+        pointer-events: none; /* Disable pointer events while loading */
+        opacity: 0.8; /* Reduce opacity while loading */
+    }
+    
+    /* Add animation for button loading spinner */
+    .btn.loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 0.8s linear infinite; /* Rotate spinner */
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); } /* Rotate spinner */
+    }
+    
+    
+    .btn i { 
+    display: none; 
+    } 
+    
+    @media screen and (max-width: 500px) { 
+    .row2 { 
+        flex-direction: column; 
+    } 
+    .inputText { 
+        width: 100%; 
+    } 
+    .outputText { 
+        width: 100%; 
+        margin-top: 20px; 
+    } 
+    } 
+    
+    ::-webkit-scrollbar { 
+    width: 4px; 
+    } 
+    ::-webkit-scrollbar-track { 
+    display: none; 
+    } 
+    ::-webkit-scrollbar-thumb { 
+    background: rgb(173, 172, 172); 
+    border-radius: 4px; 
+    } 
+    /* .copy-btn{
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+     padding: 20px;
+     size: 10px;
+    } */
+    .copy-btn {
+        background-color: #4CAF50; /* Green background */
+        border: none;
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block;
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Margin */
+        cursor: pointer; /* Cursor pointer */
+        border-radius: 4px; /* Rounded corners */
+        transition: background-color 0.3s; /* Transition effect to change background color */
+    }
+    
+    /* Hover effect */
+    .copy-btn:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    
+    /* Animation effect */
+    @keyframes copyAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .copy-btn.copied {
+        animation: copyAnimation 0.5s ease;
+    }
+   
+
+    .logo{
+        width: 200px;
+        padding-bottom: 20px;
+    }
