@@ -1,8 +1,10 @@
 
 
 body { 
+    background: url('https://st2.depositphotos.com/2232796/43703/i/450/depositphotos_437035306-stock-photo-little-kids-computer-isolated-white.jpg');
     padding: 0; 
     margin: 0; 
+    background-repeat: no-repeat;
     box-sizing: border-box; 
     } 
     
@@ -112,20 +114,7 @@ body {
     margin-bottom: 20px; 
     } 
     
-    /* .btn { 
-    width: 100%; 
-    position: relative; 
-    padding: 10px; 
-    outline: none; 
-    background-color: #3374de; 
-    color: #fff; 
-    border: 2px solid #ed6da0; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    letter-spacing: 0.5px; 
     
-    }  */
     .btn {
         width: 100%;
         position: relative;
@@ -138,34 +127,30 @@ body {
         cursor: pointer;
         font-size: 16px;
         letter-spacing: 0.5px;
-        transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition for background color, text color, and transform */
-    }
-    
-    /* Hover effect */
+        transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+        }
+   
     .btn:hover {
-        background-color: #265da3; /* Darken background color on hover */
-        color: #f0f0f0; /* Lighten text color on hover */
-        transform: translateY(-2px); /* Move button slightly upwards on hover */
+        background-color: #a012b2; 
+        color: #f0f0f0;
+        transform: translateY(-3px); 
     }
     
-    /* Active state effect */
+   
     .btn:active {
-        transform: translateY(1px); /* Move button slightly downwards on click */
-    }
+        transform: translateY(1px); 
+        }
     
-    /* Focus state effect */
+
     .btn:focus {
-        outline: none; /* Remove default focus outline */
-        box-shadow: 0 0 0 2px #3374de; /* Add custom focus outline */
+        outline: none; 
+        box-shadow: 0 0 0 2px #ab6b9e; 
     }
     
-    /* Add animation for button loading state */
     .btn.loading {
-        pointer-events: none; /* Disable pointer events while loading */
-        opacity: 0.8; /* Reduce opacity while loading */
+        pointer-events: none;
+        opacity: 0.8; 
     }
-    
-    /* Add animation for button loading spinner */
     .btn.loading::after {
         content: '';
         position: absolute;
@@ -176,11 +161,11 @@ body {
         border: 2px solid #fff;
         border-radius: 50%;
         border-top-color: transparent;
-        animation: spin 0.8s linear infinite; /* Rotate spinner */
+        animation: spin 0.8s linear infinite; 
     }
     
     @keyframes spin {
-        to { transform: rotate(360deg); } /* Rotate spinner */
+        to { transform: rotate(360deg); } 
     }
     
     
@@ -211,34 +196,27 @@ body {
     background: rgb(173, 172, 172); 
     border-radius: 4px; 
     } 
-    /* .copy-btn{
-        display: flex;
-        align-items:flex-start;
-        flex-direction: column;
-     padding: 20px;
-     size: 10px;
-    } */
+    
     .copy-btn {
-        background-color: #4CAF50; /* Green background */
+        background-color: #11706b; 
         border: none;
-        color: white; /* White text */
-        padding: 10px 20px; /* Padding */
-        text-align: center; /* Center text */
-        text-decoration: none; /* Remove underline */
+        color: white;
+        padding: 10px 20px; 
+        text-align: center;
+        text-decoration: none; 
         display: inline-block;
         font-size: 16px; /* Font size */
         margin: 4px 2px; /* Margin */
         cursor: pointer; /* Cursor pointer */
         border-radius: 4px; /* Rounded corners */
-        transition: background-color 0.3s; /* Transition effect to change background color */
+        transition: background-color 0.3s; 
     }
     
-    /* Hover effect */
+    
     .copy-btn:hover {
-        background-color: #45a049; /* Darker green on hover */
+        background-color: #0f70a1; 
     }
-    
-    /* Animation effect */
+   
     @keyframes copyAnimation {
         0% { transform: scale(1); }
         50% { transform: scale(1.05); }
